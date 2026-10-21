@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>动物翻译官-灵长类保护 · 兰州大学生态学院</title>
+<meta name="description" content="动物翻译官-灵长类保护课题组（兰州大学生态学院），聚焦保护生物学与生态文明研究，以系统思维守护濒危灵长类。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   动物翻译官-灵长类保护课题组 · 兰州大学生态学院
+   视觉方向：生态有机 + 编辑式（editorial）
+   色彩：深松绿 / 苔藓绿 / 金丝猴暖金 / 暖米白
+   ============================================================ */
+:root{
+  --paper:        oklch(0.965 0.012 95);
+  --paper-2:      oklch(0.94 0.016 92);
+  --ink:          oklch(0.27 0.028 160);
+  --ink-soft:     oklch(0.40 0.026 158);
+  --forest:       oklch(0.36 0.056 154);
+  --forest-deep:  oklch(0.29 0.050 155);
+  --moss:         oklch(0.54 0.078 147);
+  --gold:         oklch(0.74 0.122 80);
+  --gold-soft:    oklch(0.88 0.070 88);
+  --sage:         oklch(0.90 0.035 142);
+  --line:         oklch(0.80 0.020 140);
+  --serif: "Noto Serif SC","Songti SC","STSong","SimSun",Georgia,serif;
+  --sans:  "Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --shadow-sm: 0 1px 2px oklch(0.3 0.03 160 / .06), 0 4px 16px oklch(0.3 0.03 160 / .06);
+  --shadow-lg: 0 2px 4px oklch(0.3 0.03 160 / .08), 0 16px 48px oklch(0.3 0.03 160 / .14);
+  --r-sm: 6px; --r-md: 12px; --r-lg: 20px;
+  --ease: cubic-bezier(.22,.61,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+::selection{background:var(--gold-soft);color:var(--forest-deep)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer}
+.container{width:min(1180px,92vw);margin-inline:auto}
+
+/* ---------- 顶栏 ---------- */
+.topbar{
+  background:var(--forest-deep);
+  color:oklch(0.94 0.02 140);
+  border-bottom:1px solid oklch(1 0 0 / .08);
+}
+.topbar-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding:10px 0;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:14px}
+.brand .logo{height:46px;width:46px;border-radius:50%;object-fit:cover;background:#fff;box-shadow:0 1px 2px oklch(0 0 0/.25)}
+.brand-text{display:flex;flex-direction:column;line-height:1.25}
+.brand-text .zh{font-family:var(--serif);font-weight:700;font-size:18px;letter-spacing:.5px;color:#fff}
+.brand-text .en{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:oklch(0.78 0.03 140);opacity:.75}
+.topbar-meta{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.topbar-email{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13.5px;color:oklch(0.88 0.02 140);
+  padding:7px 14px;border-radius:999px;
+  background:oklch(1 0 0/.08);transition:background .25s var(--ease),color .25s var(--ease);
+}
+.topbar-email:hover{background:var(--gold);color:var(--forest-deep)}
+.topbar-email svg{width:15px;height:15px}
+.social-links{display:flex;align-items:center;gap:6px}
+.social-links a{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;border-radius:50%;
+  color:oklch(0.9 0.02 140);
+  background:oklch(1 0 0/.08);
+  transition:background .25s var(--ease),transform .25s var(--ease),color .25s var(--ease);
+}
+.social-links a:hover{background:var(--gold);color:var(--forest-deep);transform:translateY(-2px)}
+.social-links svg{width:17px;height:17px}
+.social-label{font-size:12px;color:oklch(0.8 0.02 140);opacity:.7;margin-right:2px}
+
+/* ---------- 导航 ---------- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:oklch(0.965 0.012 95/.86);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+.nav-links a{
+  display:inline-block;padding:10px 18px;font-size:15px;font-weight:500;
+  color:var(--ink-soft);border-radius:8px;position:relative;
+  transition:color .25s var(--ease),background .25s var(--ease);
+}
+.nav-links a:hover{color:var(--forest);background:var(--sage)}
+.nav-links a.active{color:var(--forest-deep);background:var(--sage);font-weight:700}
+.nav-links a.active::after{
+  content:"";position:absolute;left:18px;right:18px;bottom:4px;height:2px;
+  background:var(--gold);border-radius:2px;
+}
+.nav-cta{
+  font-size:13.5px;font-weight:600;color:var(--forest-deep);
+  padding:8px 16px;border-radius:999px;border:1.5px solid var(--forest);
+  transition:background .25s var(--ease),color .25s var(--ease);
+}
+.nav-cta:hover{background:var(--forest);color:var(--paper)}
+.nav-toggle{display:none;background:none;border:none;color:var(--ink);padding:8px}
+.nav-toggle svg{width:26px;height:26px}
+
+/* ---------- 页面切换 ---------- */
+.page{display:none;animation:pageIn .55s var(--ease)}
+.page.active{display:block}
+@keyframes pageIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* ---------- 通用标题 ---------- */
+.eyebrow{
+  font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--moss);
+  display:inline-flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--gold);border-radius:2px}
+.section{padding:72px 0}
+.section-head{max-width:680px;margin-bottom:44px}
+.section-head h2{
+  font-family:var(--serif);font-weight:900;font-size:clamp(28px,4vw,44px);
+  line-height:1.15;letter-spacing:.5px;margin:12px 0 14px;color:var(--forest-deep);
+}
+.section-head p{color:var(--ink-soft);font-size:16.5px}
+
+/* ---------- 首页 Hero ---------- */
+.hero{position:relative;overflow:hidden;background:var(--forest-deep);color:oklch(0.95 0.015 95)}
+.hero-contours{position:absolute;inset:0;width:100%;height:100%;opacity:.22;pointer-events:none}
+.hero-inner{
+  position:relative;display:grid;grid-template-columns:1.25fr .75fr;
+  gap:48px;align-items:center;padding:88px 0 96px;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft);
+  margin-bottom:22px;
+}
+.hero-kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.hero h1{
+  font-family:var(--serif);font-weight:900;
+  font-size:clamp(38px,6vw,68px);line-height:1.08;letter-spacing:1px;
+  color:#fff;
+}
+.hero h1 .accent{color:var(--gold)}
+.hero-sub{margin-top:22px;font-size:18px;color:oklch(0.86 0.02 140);max-width:560px;font-weight:300}
+.hero-quote{
+  margin-top:30px;padding:18px 22px;border-left:3px solid var(--gold);
+  background:oklch(1 0 0/.06);border-radius:0 var(--r-md) var(--r-md) 0;
+  font-family:var(--serif);font-size:17px;color:oklch(0.9 0.03 90);font-style:italic;
+}
+.hero-quote small{display:block;margin-top:6px;font-style:normal;font-family:var(--sans);font-size:12.5px;color:oklch(0.75 0.02 140);letter-spacing:.05em}
+.hero-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;
+  padding:13px 26px;border-radius:999px;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease);
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--gold);color:var(--forest-deep);box-shadow:0 6px 20px oklch(0.74 0.12 80/.35)}
+.btn-primary:hover{box-shadow:0 10px 28px oklch(0.74 0.12 80/.5)}
+.btn-ghost{border:1.5px solid oklch(1 0 0/.35);color:#fff}
+.btn-ghost:hover{background:oklch(1 0 0/.1);border-color:oklch(1 0 0/.6)}
+.hero-figure{position:relative}
+.hero-badge{
+  position:relative;width:100%;aspect-ratio:1;max-width:380px;margin-inline:auto;
+  border-radius:50%;background:
+    radial-gradient(circle at 35% 30%, oklch(0.45 0.06 150), oklch(0.32 0.05 155) 70%);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 20px 60px oklch(0 0 0/.35), inset 0 0 0 1px oklch(1 0 0/.1);
+}
+.hero-badge img{width:82%;height:82%;border-radius:50%;object-fit:contain;background:#fff}
+.hero-badge .ring{position:absolute;inset:-14px;border-radius:50%;border:1px dashed oklch(1 0 0/.25);animation:spin 30s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-stats{
+  position:relative;margin-top:8px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border-top:1px solid oklch(1 0 0/.14);
+}
+.stat{padding:26px 12px 0;text-align:left}
+.stat .num{font-family:var(--serif);font-weight:900;font-size:clamp(26px,3.4vw,40px);color:var(--gold);line-height:1}
+.stat .num .plus{font-size:.55em;vertical-align:top}
+.stat .lbl{margin-top:8px;font-size:13px;color:oklch(0.78 0.02 140);letter-spacing:.04em}
+
+/* ---------- 研究方向 ---------- */
+.research{background:var(--paper)}
+.research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.research-item{
+  background:var(--paper-2);border-radius:var(--r-lg);padding:30px 28px;
+  box-shadow:var(--shadow-sm);transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+  border-top:3px solid transparent;
+}
+.research-item:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-top-color:var(--gold)}
+.research-item .idx{font-family:var(--serif);font-weight:900;font-size:40px;color:var(--sage);line-height:1}
+.research-item h3{font-family:var(--serif);font-weight:700;font-size:21px;margin:14px 0 10px;color:var(--forest-deep)}
+.research-item p{color:var(--ink-soft);font-size:15px}
+
+/* ---------- 最新成果 ---------- */
+.spotlight{background:var(--forest-deep);color:oklch(0.95 0.015 95);position:relative;overflow:hidden}
+.spotlight .eyebrow{color:var(--gold-soft)}
+.spotlight .eyebrow::before{background:var(--gold)}
+.spotlight-card{
+  position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;
+  background:oklch(1 0 0/.06);border:1px solid oklch(1 0 0/.1);
+  border-radius:var(--r-lg);padding:40px;backdrop-filter:blur(4px);
+}
+.spotlight-tag{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--forest-deep);
+  background:var(--gold);padding:6px 14px;border-radius:999px;margin-bottom:18px;
+}
+.spotlight-card h3{font-family:var(--serif);font-weight:700;font-size:clamp(20px,2.4vw,27px);line-height:1.4;color:#fff}
+.spotlight-meta{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
+.chip{font-size:12.5px;color:oklch(0.84 0.02 140);padding:5px 12px;border-radius:999px;background:oklch(1 0 0/.08);border:1px solid oklch(1 0 0/.12)}
+.spotlight-abstract{margin-top:20px;font-size:15px;color:oklch(0.82 0.02 140);line-height:1.8}
+.spotlight-link{margin-top:24px}
+.spotlight-visual{position:relative}
+.spotlight-visual .cover{
+  border-radius:var(--r-md);overflow:hidden;box-shadow:0 20px 50px oklch(0 0 0/.35);
+  background:linear-gradient(140deg,oklch(0.4 0.06 155),oklch(0.3 0.05 155));
+}
+.spotlight-visual .cover img{width:100%;height:auto;object-fit:cover}
+.spotlight-visual .cover svg{width:100%;height:auto;display:block}
+
+/* ---------- 团队成员 ---------- */
+.team{background:var(--paper)}
+.team-block{margin-bottom:56px}
+.team-block:last-child{margin-bottom:0}
+.team-title{
+  display:flex;align-items:baseline;gap:14px;margin-bottom:26px;flex-wrap:wrap;
+}
+.team-title h3{font-family:var(--serif);font-weight:900;font-size:26px;color:var(--forest-deep);letter-spacing:.5px}
+.team-title .sub{font-size:13px;color:var(--ink-soft);letter-spacing:.06em}
+.team-title .divider{flex:1;height:1px;background:var(--line);min-width:40px}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.member{
+  background:#fff;border-radius:var(--r-md);padding:26px 24px;
+  box-shadow:var(--shadow-sm);transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+  display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden;
+}
+.member::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--sage);transition:background .3s var(--ease)}
+.member:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.member:hover::before{background:var(--gold)}
+.member-top{display:flex;align-items:center;gap:14px}
+.avatar{
+  width:56px;height:56px;border-radius:50%;flex:none;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(140deg,var(--moss),var(--forest));
+  color:#fff;font-family:var(--serif);font-weight:700;font-size:22px;
+}
+.avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.member-id h4{font-size:18px;font-weight:700;color:var(--forest-deep)}
+.member-id .role{font-size:12.5px;color:var(--moss);font-weight:600;letter-spacing:.03em}
+.member p{font-size:14px;color:var(--ink-soft);line-height:1.7}
+.member .tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.member .tag-row .mini{font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);padding:3px 9px;border-radius:999px}
+.edu-list{display:flex;flex-wrap:wrap;gap:8px}
+.edu{font-size:13px;color:var(--ink-soft);background:var(--paper-2);padding:6px 13px;border-radius:999px}
+.edu b{color:var(--forest);font-weight:700}
+.member.lead{padding:30px 28px}
+.member.lead .avatar{width:72px;height:72px;font-size:28px}
+.member.lead h4{font-size:20px}
+
+/* 合作导师 */
+.collab-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.collab{
+  background:#fff;border-radius:var(--r-md);padding:26px 28px;box-shadow:var(--shadow-sm);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+}
+.collab:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.collab-head{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.collab-head .avatar{width:56px;height:56px}
+.collab-head .collab-id{flex:1;min-width:0}
+.collab-head h4{font-family:var(--serif);font-size:19px;font-weight:700;color:var(--forest-deep)}
+.collab-head .org{display:block;font-size:12.5px;color:var(--moss);font-weight:600;line-height:1.4;margin-top:2px}
+.collab p{font-size:14px;color:var(--ink-soft);line-height:1.75}
+
+/* ---------- 论文 ---------- */
+.pubs{background:var(--paper)}
+.pub-list{display:flex;flex-direction:column;gap:14px}
+.pub{
+  display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:flex-start;
+  background:#fff;border-radius:var(--r-md);padding:24px 26px;box-shadow:var(--shadow-sm);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);
+  border-left:3px solid transparent;
+}
+.pub:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-left-color:var(--gold)}
+.pub-year{font-family:var(--serif);font-weight:900;font-size:22px;color:var(--moss);line-height:1.2;padding-top:2px}
+.pub-body h4{font-size:16.5px;font-weight:700;color:var(--forest-deep);line-height:1.5}
+.pub-body .authors{font-size:13.5px;color:var(--ink-soft);margin-top:6px;line-height:1.6}
+.pub-body .journal{margin-top:8px;font-size:13px}
+.pub-body .journal b{color:var(--moss)}
+.pub-action{align-self:center}
+.pub-link{
+  display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:var(--forest);
+  padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);
+  transition:background .25s var(--ease),border-color .25s var(--ease),color .25s var(--ease);
+  white-space:nowrap;
+}
+.pub-link:hover{background:var(--forest);border-color:var(--forest);color:#fff}
+.pub-link svg{width:14px;height:14px}
+.pub-note{font-size:13px;color:var(--ink-soft);margin-top:18px;text-align:right}
+
+/* ---------- 项目成果 ---------- */
+.projects{background:var(--paper-2)}
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.proj{
+  background:#fff;border-radius:var(--r-md);padding:28px;box-shadow:var(--shadow-sm);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+}
+.proj:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.proj .ico{width:46px;height:46px;border-radius:12px;background:var(--sage);display:flex;align-items:center;justify-content:center;color:var(--forest);margin-bottom:16px}
+.proj .ico svg{width:24px;height:24px}
+.proj h4{font-family:var(--serif);font-size:19px;font-weight:700;color:var(--forest-deep);margin-bottom:8px}
+.proj p{font-size:14.5px;color:var(--ink-soft)}
+.award-strip{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.award{font-size:13.5px;font-weight:500;color:var(--forest-deep);background:var(--gold-soft);padding:8px 15px;border-radius:999px}
+
+/* ---------- 野外风采 ---------- */
+.field{background:var(--forest-deep);color:oklch(0.95 0.015 95)}
+.field .section-head h2{color:#fff}
+.field .section-head p{color:oklch(0.82 0.02 140)}
+.field .eyebrow{color:var(--gold-soft)}
+.field .eyebrow::before{background:var(--gold)}
+.marquee{overflow:hidden;position:relative;padding:8px 0}
+.marquee::before,.marquee::after{
+  content:"";position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none;
+}
+.marquee::before{left:0;background:linear-gradient(90deg,var(--forest-deep),transparent)}
+.marquee::after{right:0;background:linear-gradient(-90deg,var(--forest-deep),transparent)}
+.marquee-track{display:flex;width:max-content;animation:marquee 52s linear infinite}
+.marquee-group{display:flex;gap:22px;padding-right:22px;flex:none}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.field-card{flex:none;width:340px;position:relative;border-radius:var(--r-md);overflow:hidden;background:oklch(0.4 0.05 155)}
+.field-card .svg-scene{height:240px}
+.field-card .svg-scene svg{width:100%;height:100%;display:block}
+.field-card img{width:100%;height:240px;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.field-card:hover img{transform:scale(1.06)}
+.field-card .cap{
+  position:absolute;inset:auto 0 0 0;padding:44px 18px 16px;
+  background:linear-gradient(transparent,oklch(0.2 0.04 155/.88));
+  color:#fff;
+}
+.field-card .cap h5{font-family:var(--serif);font-size:16.5px;font-weight:700}
+.field-card .cap span{font-size:12px;color:oklch(0.82 0.02 140);letter-spacing:.04em}
+.field-hint{margin-top:22px;text-align:center;font-size:13px;color:oklch(0.72 0.02 140)}
+
+/* ---------- 页脚 ---------- */
+.footer{background:oklch(0.25 0.04 158);color:oklch(0.8 0.02 140);padding:56px 0 30px;font-size:14px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px}
+.footer h5{font-family:var(--serif);font-size:16px;color:#fff;margin-bottom:14px;font-weight:700}
+.footer p{line-height:1.8;color:oklch(0.74 0.02 140)}
+.footer a{color:oklch(0.8 0.02 140);transition:color .2s var(--ease)}
+.footer a:hover{color:var(--gold)}
+.footer ul{list-style:none}
+.footer li{margin-bottom:8px}
+.footer .motto{font-family:var(--serif);font-size:15px;color:var(--gold-soft);margin-top:12px;letter-spacing:.08em}
+.footer-bottom{border-top:1px solid oklch(1 0 0/.1);padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:oklch(0.66 0.02 140)}
+
+/* ---------- 进入视口动画 ---------- */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:920px){
+  .hero-inner{grid-template-columns:1fr;padding:56px 0 64px;gap:36px}
+  .hero-figure{order:-1}
+  .hero-badge{max-width:260px}
+  .research-grid,.team-grid{grid-template-columns:1fr 1fr}
+  .collab-grid,.proj-grid{grid-template-columns:1fr}
+  .spotlight-card{grid-template-columns:1fr;padding:28px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .nav-links{
+    position:absolute;top:60px;left:0;right:0;flex-direction:column;align-items:stretch;
+    background:var(--paper);border-bottom:1px solid var(--line);padding:8px 16px 16px;
+    display:none;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px 16px}
+  .nav-toggle{display:block}
+  .nav-cta{display:none}
+  .research-grid,.team-grid{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .pub{grid-template-columns:1fr;gap:12px}
+  .pub-action{align-self:flex-start}
+  .footer-grid{grid-template-columns:1fr}
+  .field-card{width:270px}
+  .field-card img{height:200px}
+  .field-card .svg-scene{height:200px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .marquee-track{animation:none}
+  .hero-badge .ring{animation:none}
+  .reveal{opacity:1;transform:none}
+  .js .reveal{opacity:1;transform:none}
+}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+</style>
+</head>
+<body>
+
+<!-- ===== 顶栏 ===== -->
+<header class="topbar">
+  <div class="container topbar-inner">
+    <div class="brand">
+      <img class="logo" src="assets/lab-logo.png" alt="动物翻译官-灵长类保护课题组标志">
+      <div class="brand-text">
+        <span class="zh">动物翻译官-灵长类保护</span>
+        <span class="en">Animal Translator · Primate Conservation · LZU</span>
+      </div>
+    </div>
+    <div class="topbar-meta">
+      <a class="topbar-email" href="mailto:zhaoxm@lzu.edu.cn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        zhaoxm@lzu.edu.cn
+      </a>
+      <div class="social-links" aria-label="新媒体账号">
+        <a href="#" title="微信公众号 · 动物翻译官（与视频号同名）">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.7 4C5 4 2 6.6 2 9.8c0 1.8 1 3.4 2.6 4.5l-.6 1.9 2.2-1.1c.5.1 1 .2 1.5.2.2 0 .4 0 .6-.1-.2-.5-.3-1-.3-1.6C8 10.7 10.7 8 14 8c.9 0 1.7.2 2.5.5C15.8 5.9 12.5 4 8.7 4ZM6.4 7.2c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9Zm4.6 0c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9ZM22 14.2c0-2.7-2.5-4.9-5.5-4.9S11 11.5 11 14.2s2.5 4.9 5.5 4.9c.6 0 1.1-.1 1.6-.2l2 .9-.5-1.7c1.4-.9 2.4-2.3 2.4-3.9Zm-7.3-.9c.4 0 .8.3.8.8s-.4.8-.8.8-.8-.3-.8-.8.4-.8.8-.8Zm3.7 0c.4 0 .8.3.8.8s-.4.8-.8.8-.8-.3-.8-.8.4-.8.8-.8Z"/></svg>
+        </a>
+        <a href="#" title="微信视频号 · 动物翻译官（与公众号同名）">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="2.6" y="4.6" width="18.8" height="14.8" rx="4.4"/><path d="M10.3 9.3 15 12l-4.7 2.7z" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://xhslink.cn/o/5C38DOQUzhg" target="_blank" rel="noopener" title="小红书 · 赵序茅">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3C10.5 5 8.4 4.4 5.6 4.5c-.6 0-1.1.4-1.1 1v11.2c0 .6.5 1.1 1.1 1 2.6-.1 4.5.5 6.4 1.9 1.9-1.4 3.8-2 6.4-1.9.6 0 1.1-.4 1.1-1V5.5c0-.6-.5-1-1.1-1-2.8-.1-4.9.5-6.4 1.8Z"/><path d="M12 6.3v13.6"/></svg>
+        </a>
+        <a href="https://v.douyin.com/SVAElI6rMj8/" target="_blank" rel="noopener" title="抖音 · 动物翻译官">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 3c.3 1.7 1.3 3 3 3.4v2.4c-1.2 0-2.3-.4-3.3-1v5.6c0 3-2.4 5.4-5.4 5.4S5.5 16.4 5.5 13.4 7.9 8 10.9 8c.2 0 .5 0 .7.1v2.5c-.2-.1-.5-.1-.7-.1-1.6 0-2.9 1.3-2.9 2.9s1.3 2.9 2.9 2.9 2.9-1.3 2.9-2.9V3h2.8Z"/></svg>
+        </a>
+        <a href="https://b23.tv/8Elv4vl" target="_blank" rel="noopener" title="B站 · 动物翻译官">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 4.5c.9 0 1.7.3 2.3.9.6.6.9 1.3.9 2.2v8.6c0 .9-.3 1.6-.9 2.2-.6.6-1.4.9-2.3.9H6.2c-.9 0-1.7-.3-2.3-.9-.6-.6-.9-1.3-.9-2.2V7.6c0-.9.3-1.6.9-2.2.6-.6 1.4-.9 2.3-.9h1l.6-1.4c.1-.2.3-.3.5-.3h2.4c.2 0 .4.1.5.3l.6 1.4h1ZM10.2 9v5.6l4.3-2.8-4.3-2.8Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== 导航 ===== -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" data-page="home" class="active">首页</a></li>
+      <li><a href="#team" data-page="team">团队成员</a></li>
+      <li><a href="#publications" data-page="publications">发表论文</a></li>
+      <li><a href="#projects" data-page="projects">项目成果</a></li>
+      <li><a href="#field" data-page="field">野外风采</a></li>
+    </ul>
+    <a class="nav-cta" href="#publications">最新成果</a>
+  </div>
+</nav>
+
+<main>
+<!-- ===================== 首页 ===================== -->
+<section class="page active" id="page-home">
+
+  <!-- Hero -->
+  <div class="hero">
+    <svg class="hero-contours" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="none" stroke="#ffffff" stroke-width="1">
+        <path d="M0 480 C200 460 320 520 520 500 S820 430 1200 470" opacity=".5"/>
+        <path d="M0 540 C200 520 340 580 540 560 S840 500 1200 530" opacity=".4"/>
+        <path d="M0 600 C200 580 360 640 560 620 S860 560 1200 590" opacity=".3"/>
+        <path d="M0 660 C200 640 380 700 580 680 S880 620 1200 650" opacity=".2"/>
+        <path d="M0 420 C200 400 300 460 500 440 S800 370 1200 410" opacity=".6"/>
+        <path d="M0 360 C200 340 280 400 480 380 S780 310 1200 350" opacity=".5"/>
+        <path d="M0 300 C200 280 260 340 460 320 S760 250 1200 290" opacity=".4"/>
+      </g>
+    </svg>
+    <div class="container hero-inner">
+      <div>
+        <div class="hero-kicker"><span class="dot"></span>保护生物学 · 生态文明 · 灵长类研究</div>
+        <h1>以系统思维<br>守护濒危<span class="accent">灵长类</span></h1>
+        <p class="hero-sub">兰州大学生态学院动物翻译官-灵长类保护课题组，聚焦气候变化与人类活动耦合下的濒危物种保护，践行「科研—科普—智库」三位一体的保护生物学路径。</p>
+        <blockquote class="hero-quote">
+          「我从来不曾优秀过，也从来不曾放弃过。」
+          <small>—— 赵序茅 博士论文致谢 · 2021</small>
+        </blockquote>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#team">认识课题组
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="https://www.science.org/doi/10.1126/sciadv.aeg0031" target="_blank" rel="noopener">Science Advances 最新成果</a>
+        </div>
+      </div>
+      <div class="hero-figure">
+        <div class="hero-badge">
+          <span class="ring"></span>
+          <img src="assets/lab-logo.png" alt="动物翻译官-灵长类保护课题组标志">
+        </div>
+      </div>
+    </div>
+    <div class="container hero-stats">
+      <div class="stat"><div class="num"><span data-count="30">0</span><span class="plus">+</span></div><div class="lbl">学术论文（篇）</div></div>
+      <div class="stat"><div class="num"><span data-count="39">0</span><span class="plus">部</span></div><div class="lbl">出版著作</div></div>
+      <div class="stat"><div class="num"><span data-count="2">0</span><span class="plus">项</span></div><div class="lbl">国家自然科学基金</div></div>
+      <div class="stat"><div class="num"><span data-count="10">0</span><span class="plus">+</span></div><div class="lbl">智库内参（份）</div></div>
+    </div>
+  </div>
+
+  <!-- 研究方向 -->
+  <div class="section research">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Research Focus</span>
+        <h2>三大研究方向</h2>
+        <p>从预见性保护到差异性保护、再到系统性保护，课题组以科学问题为起点，以中国特有濒危灵长类为核心对象，以全球视野为参照，以政策转化为落脚点。</p>
+      </div>
+      <div class="research-grid">
+        <div class="research-item reveal d1">
+          <div class="idx">01</div>
+          <h3>预见性保护</h3>
+          <p>基于气候变化和人类活动耦合驱动，量化气候风险对灵长类适宜栖息地、连通性格局及保护空缺的动态影响，在威胁尚未完全显性化之前识别潜在高风险区域。</p>
+        </div>
+        <div class="research-item reveal d2">
+          <div class="idx">02</div>
+          <h3>差异性保护</h3>
+          <p>同一物种不同亚种、地理亚群在遗传结构、生态适应与受威胁程度上差异显著，通过种群水平的精细评估，推动保护策略从「一物种一策」细化为「一亚种种群一策」。</p>
+        </div>
+        <div class="research-item reveal d3">
+          <div class="idx">03</div>
+          <h3>系统性保护</h3>
+          <p>将系统发育信息纳入保护优先区识别，强调进化独特性与进化历史的保护维度，避免全球变化背景下进化历史的不可逆丧失。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 最新成果 -->
+  <div class="section spotlight">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Latest Highlight</span>
+        <h2>最新成果 · Science Advances</h2>
+        <p>课题组联合中科院动物研究所、中南林业科技大学，在全球顶级期刊发表灵长类气候变化风险研究。</p>
+      </div>
+      <div class="spotlight-card reveal">
+        <div>
+          <span class="spotlight-tag">Science Advances · 2026</span>
+          <h3>Modeling the effects of climate risk on primates globally: new perspectives on conservation priorities</h3>
+          <div class="spotlight-meta">
+            <span class="chip">赵序茅 团队</span>
+            <span class="chip">李明 研究员</span>
+            <span class="chip">向左甫 教授</span>
+          </div>
+          <p class="spotlight-abstract">研究重建非人灵长类物种的系统发育关系，综合多指标因素系统探讨灵长类物种分布的时空模式，预测未来气候变化情景下的优先保护区域，为全球灵长类保护提供新的科学依据——将宏观生态学、进化生物学与保护生物学交叉融合，提升了优先保护区域识别的空间精度。</p>
+          <div class="spotlight-link">
+            <a class="btn btn-primary" href="https://www.science.org/doi/10.1126/sciadv.aeg0031" target="_blank" rel="noopener">阅读原文
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="spotlight-visual">
+          <div class="cover">
+            <svg viewBox="0 0 600 400" role="img" aria-label="灵长类系统发育与多样性分布示意">
+              <rect width="600" height="400" fill="oklch(0.34 0.05 155)"/>
+              <g fill="none" stroke="#f3d9a4" stroke-opacity=".6" stroke-width="1.2">
+                <path d="M60 340 C120 280 140 300 190 240 S250 200 300 150"/>
+                <path d="M60 340 C120 300 150 260 200 230 S260 160 300 120"/>
+                <path d="M60 340 C110 320 150 290 200 270 S280 210 320 180"/>
+              </g>
+              <g>
+                <circle cx="300" cy="150" r="6" fill="#f3d9a4"/>
+                <circle cx="200" cy="230" r="6" fill="#e8c584"/>
+                <circle cx="320" cy="120" r="6" fill="#e8c584"/>
+                <circle cx="200" cy="270" r="6" fill="#d9b06a"/>
+                <circle cx="320" cy="180" r="6" fill="#d9b06a"/>
+                <circle cx="140" cy="300" r="6" fill="#cfa24f"/>
+                <circle cx="230" cy="200" r="5" fill="#cfa24f"/>
+              </g>
+              <text x="330" y="330" fill="#f3d9a4" font-family="Georgia,serif" font-size="15" font-style="italic">Phylogenetic diversity</text>
+              <text x="60" y="90" fill="#f3d9a4" font-family="Georgia,serif" font-size="15">Global primates</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 荣誉 -->
+  <div class="section projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Honors & Awards</span>
+        <h2>荣誉与认可</h2>
+        <p>赵序茅教授以科普与科研并重，先后获得多项国家级与省部级荣誉。</p>
+      </div>
+      <div class="award-strip reveal">
+        <span class="award">全国科普工作先进工作者</span>
+        <span class="award">全国优秀青年动物生态学工作者</span>
+        <span class="award">甘肃第十一届青年科技奖</span>
+        <span class="award">陇原青年英才</span>
+        <span class="award">点赞2022科普中国科研科普人物</span>
+        <span class="award">第五届梁希科普一等奖</span>
+        <span class="award">两次中国好书奖</span>
+        <span class="award">三次全国优秀科普图书奖</span>
+        <span class="award">金城首席科普专家</span>
+        <span class="award">中国作家协会会员</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===================== 团队成员 ===================== -->
+<section class="page" id="page-team">
+  <div class="section team">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Team Members</span>
+        <h2>团队成员</h2>
+        <p>一支由保护生物学、生态学与进化生物学背景成员组成的跨学科研究团队。</p>
+      </div>
+
+      <!-- 课题组长 -->
+      <div class="team-block reveal">
+        <div class="team-title"><h3>课题组负责人</h3><span class="sub">Principal Investigator</span><span class="divider"></span></div>
+        <div class="team-grid">
+          <div class="member lead" style="grid-column:1/-1">
+            <div class="member-top">
+              <div class="avatar"><img src="assets/zhaoxumao.jpg" alt="赵序茅"></div>
+              <div class="member-id">
+                <h4>赵序茅 教授</h4>
+                <div class="role">兰州大学<br>生态学院 · 教授 · 博士研究生导师</div>
+              </div>
+            </div>
+            <p>从事保护生物学与生态文明相关研究，主要聚焦动物生态学、综合行为生态学、物种分布模型。主持国家自然科学基金项目 2 项，在国内外主流学术期刊发表文章 30 余篇，出版著作 39 部。兼任一带一路研究中心特聘教授、北京林业大学生态文明中心研究员、兰州大学科普部部长、兰州大学科学观测台站副主任。2021 年因博士论文致谢《我从来不曾优秀过，也从来不曾放弃过》在网络走红，个人经历与研究成果先后被人民日报、新华社、学习强国、CCTV 报道。</p>
+            <div class="edu-list">
+              <span class="edu"><b>2015–2019</b> 中国科学院动物研究所 · 生态学 · 理学博士</span>
+              <span class="edu"><b>2011–2015</b> 中国科学院新疆生态与地理研究所 · 环境工程 · 工学硕士</span>
+              <span class="edu"><b>2007–2011</b> 临沂大学 · 地理科学 · 理学学士</span>
+            </div>
+            <div class="tag-row">
+              <span class="mini">国际灵长类学会会员</span>
+              <span class="mini">中国灵长类学会理事</span>
+              <span class="mini">第十四届全国青联常委</span>
+              <span class="mini">甘肃省青联副主席</span>
+              <span class="mini">中国青年科协理事</span>
+              <span class="mini">团中央理论宣讲团成员</span>
+              <span class="mini">中国作家协会会员</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 合作导师 -->
+      <div class="team-block reveal">
+        <div class="team-title"><h3>合作导师</h3><span class="sub">Collaborators</span><span class="divider"></span></div>
+        <div class="collab-grid">
+          <div class="collab">
+            <div class="collab-head">
+              <div class="avatar"><img src="assets/liming.jpg" alt="李明"></div>
+              <div class="collab-id">
+                <h4>李明 研究员</h4>
+                <span class="org">中国科学院动物研究所<br>动物生态与保护生物学重点实验室</span>
+              </div>
+            </div>
+            <p>灵长类生态学研究组组长，中国动物学会理事、兽类学分会秘书长，中国生态学会动物生态专业委员会副主任委员。长期从事灵长类生态学、行为学与保护生物学研究，与课题组联合开展全球灵长类气候变化风险等合作研究。</p>
+          </div>
+          <div class="collab">
+            <div class="collab-head">
+              <div class="avatar"><img src="assets/xiangzuofu.jpg" alt="向左甫"></div>
+              <div class="collab-id">
+                <h4>向左甫 教授</h4>
+                <span class="org">中南林业科技大学<br>林学院</span>
+              </div>
+            </div>
+            <p>博士生导师，湖南省「芙蓉学者」特聘教授，世界自然保护联盟（IUCN）灵长类专家组成员。长期从事金丝猴（滇金丝猴、黔金丝猴、川金丝猴、怒江金丝猴）的行为生态与保护生物学研究，在神农架大龙潭等基地持续开展川金丝猴长期监测。</p>
+          </div>
+          <div class="collab">
+            <div class="collab-head">
+              <div class="avatar"><img src="assets/zhouweiwei.jpg" alt="周炜帏"></div>
+              <div class="collab-id">
+                <h4>周炜帏 教授</h4>
+                <span class="org">兰州大学<br>生态学院</span>
+              </div>
+            </div>
+            <p>硕士研究生导师。主要以两栖爬行动物为研究对象，围绕物种形成、区域生物多样性演化与适应性保护等科学问题开展研究，在 PNAS、Systematic Biology、Molecular Ecology 等国际期刊发表多篇论文。</p>
+          </div>
+          <div class="collab">
+            <div class="collab-head">
+              <div class="avatar"><img src="assets/fanpenglai.jpg" alt="范鹏来"></div>
+              <div class="collab-id">
+                <h4>范鹏来 教授</h4>
+                <span class="org">广西师范大学<br>生命科学学院</span>
+              </div>
+            </div>
+            <p>博士生导师。以白头叶猴、黑叶猴等珍稀濒危石山叶猴为主要研究对象，长期从事灵长类行为生态学、保护生物学与声音通讯研究，运用被动声学监测等技术探究灵长类声音信号的适应特征与信息传递功能。在 Science、Science Advances 等期刊发表论文 30 余篇，并担任多部自然纪录片的科学顾问。</p>
+          </div>
+          <div class="collab">
+            <div class="collab-head">
+              <div class="avatar"><img src="assets/yangli.jpg" alt="杨立"></div>
+              <div class="collab-id">
+                <h4>杨立 副教授</h4>
+                <span class="org">中山大学<br>生态学院</span>
+              </div>
+            </div>
+            <p>博士生导师。研究领域为濒危物种与生物多样性保护、系统保护规划，重点聚焦灵长类（以长臂猿为主），围绕「如何在复杂环境下实现保护绩效最大化」开展分布区动态及其驱动因素研究。</p>
+          </div>
+          <div class="collab">
+            <div class="collab-head">
+              <div class="avatar"><img src="assets/paulgarber.jpg" alt="Paul A. Garber"></div>
+              <div class="collab-id">
+                <h4>Paul A. Garber 教授</h4>
+                <span class="org">University of Illinois<br>Urbana-Champaign</span>
+              </div>
+            </div>
+            <p>国际知名灵长类行为生态学家，长期致力于灵长类社会行为、觅食生态与保护生物学研究，为课题组提供国际视野下的合作研究支持。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 博士研究生 -->
+      <div class="team-block reveal">
+        <div class="team-title"><h3>博士研究生</h3><span class="sub">Ph.D. Students</span><span class="divider"></span></div>
+        <div class="team-grid">
+          <div class="member">
+            <div class="member-top">
+              <div class="avatar"><img src="assets/sunjiahao.jpg" alt="孙佳浩"></div>
+              <div class="member-id"><h4>孙佳浩</h4><div class="role">在读博士研究生</div></div>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-top">
+              <div class="avatar"><img src="assets/zhanglei.jpg" alt="张磊"></div>
+              <div class="member-id"><h4>张磊</h4><div class="role">在读博士研究生</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 科研助理 -->
+      <div class="team-block reveal">
+        <div class="team-title"><h3>科研助理</h3><span class="sub">Research Assistant</span><span class="divider"></span></div>
+        <div class="team-grid">
+          <div class="member">
+            <div class="member-top">
+              <div class="avatar"><img src="assets/sunzhihao.jpg" alt="孙之昊"></div>
+              <div class="member-id"><h4>孙之昊</h4><div class="role">科研助理</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 硕士研究生 -->
+      <div class="team-block reveal">
+        <div class="team-title"><h3>硕士研究生</h3><span class="sub">M.Sc. Students</span><span class="divider"></span></div>
+        <div class="team-grid">
+          <div class="member">
+            <div class="member-top">
+              <div class="avatar"><img src="assets/bailu.jpg" alt="白璐"></div>
+              <div class="member-id"><h4>白璐</h4><div class="role">在读硕士研究生</div></div>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-top">
+              <div class="avatar"><img src="assets/heyanjin.jpg" alt="何炎瑾"></div>
+              <div class="member-id"><h4>何炎瑾</h4><div class="role">在读硕士研究生</div></div>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-top">
+              <div class="avatar"><img src="assets/hucuiran.jpg" alt="扈翠冉"></div>
+              <div class="member-id"><h4>扈翠冉</h4><div class="role">在读硕士研究生</div></div>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-top">
+              <div class="avatar"><img src="assets/liuqingyuan.jpg" alt="刘清源"></div>
+              <div class="member-id"><h4>刘清源</h4><div class="role">在读硕士研究生</div></div>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-top">
+              <div class="avatar"><img src="assets/maruikai.jpg" alt="马睿恺"></div>
+              <div class="member-id"><h4>马睿恺</h4><div class="role">在读硕士研究生</div></div>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-top">
+              <div class="avatar"><img src="assets/pengkejia.jpg" alt="彭可佳"></div>
+              <div class="member-id"><h4>彭可佳</h4><div class="role">在读硕士研究生</div></div>
+            </div>
+          </div>
+          <div class="member">
+            <div class="member-top">
+              <div class="avatar"><img src="assets/wutong.jpg" alt="吴桐"></div>
+              <div class="member-id"><h4>吴桐</h4><div class="role">在读硕士研究生</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 发表论文 ===================== -->
+<section class="page" id="page-publications">
+  <div class="section pubs">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Publications</span>
+        <h2>发表论文</h2>
+        <p>课题组在国内外主流学术期刊发表论文 30 余篇，以下为代表性成果。</p>
+      </div>
+      <div class="pub-list">
+        <div class="pub reveal">
+          <div class="pub-year">2026</div>
+          <div class="pub-body">
+            <h4>Modeling the effects of climate risk on primates globally: new perspectives on conservation priorities</h4>
+            <div class="authors">Xumao Zhao, et al. (与李明研究员、向左甫教授团队合作)</div>
+            <div class="journal"><b>Science Advances</b> · DOI: 10.1126/sciadv.aeg0031</div>
+          </div>
+          <div class="pub-action"><a class="pub-link" href="https://www.science.org/doi/10.1126/sciadv.aeg0031" target="_blank" rel="noopener">原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+        </div>
+        <div class="pub reveal">
+          <div class="pub-year">2024</div>
+          <div class="pub-body">
+            <h4>Climate and anthropogenic activities threaten two langur species irrespective of their range size</h4>
+            <div class="authors">Zhao XM, Ye X, Garber PA, Li M, et al.</div>
+            <div class="journal"><b>Diversity and Distributions · 30(7): e13841</b> · DOI: 10.1111/ddi.13841</div>
+          </div>
+          <div class="pub-action"><a class="pub-link" href="https://doi.org/10.1111/ddi.13841" target="_blank" rel="noopener">原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+        </div>
+        <div class="pub reveal">
+          <div class="pub-year">2023</div>
+          <div class="pub-body">
+            <h4>The impact of climate change and human activities over the past 2000 years has increased the spatial-temporal extinction rate of gibbons</h4>
+            <div class="authors">Zhao XM, Garber PA, Ye XL, Li M</div>
+            <div class="journal"><b>Biological Conservation · 281: 109998</b> · DOI: 10.1016/j.biocon.2023.109998</div>
+          </div>
+          <div class="pub-action"><a class="pub-link" href="https://doi.org/10.1016/j.biocon.2023.109998" target="_blank" rel="noopener">原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+        </div>
+        <div class="pub reveal">
+          <div class="pub-year">2022</div>
+          <div class="pub-body">
+            <h4>Differential response to climate change and human activities in three lineages of Sichuan snub-nosed monkeys (Rhinopithecus roxellana)</h4>
+            <div class="authors">Zhao XM, Li X, Zhang Z, Garber PA, Yu M, Qiao H, Li M</div>
+            <div class="journal"><b>Diversity and Distributions · 28: 2416–2428</b> · DOI: 10.1111/ddi.13638</div>
+          </div>
+          <div class="pub-action"><a class="pub-link" href="https://doi.org/10.1111/ddi.13638" target="_blank" rel="noopener">原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+        </div>
+        <div class="pub reveal">
+          <div class="pub-year">2021</div>
+          <div class="pub-body">
+            <h4>Alleviating human poverty: A successful model promoting wildlife conservation in China</h4>
+            <div class="authors">Zhao XM, Garber PA, Li M</div>
+            <div class="journal"><b>Conservation Science and Practice · e511</b> · DOI: 10.1111/csp2.511</div>
+          </div>
+          <div class="pub-action"><a class="pub-link" href="https://doi.org/10.1111/csp2.511" target="_blank" rel="noopener">原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+        </div>
+        <div class="pub reveal">
+          <div class="pub-year">2021</div>
+          <div class="pub-body">
+            <h4>Investment in science can mitigate the negative impacts of land use on declining primate populations</h4>
+            <div class="authors">Zhao XM, Li X, Garber PA, Qi X, Xiang Z, Liu X, Lian Z, Li M</div>
+            <div class="journal"><b>American Journal of Primatology · 83: e23302</b> · DOI: 10.1002/ajp.23302</div>
+          </div>
+          <div class="pub-action"><a class="pub-link" href="https://doi.org/10.1002/ajp.23302" target="_blank" rel="noopener">原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+        </div>
+        <div class="pub reveal">
+          <div class="pub-year">2019</div>
+          <div class="pub-body">
+            <h4>Climate change, grazing, and collecting accelerate habitat contraction in an endangered primate</h4>
+            <div class="authors">Zhao XM, Ren BP, Garber PA, Liu Z, Li M</div>
+            <div class="journal"><b>Biological Conservation · 231: 88–97</b> · DOI: 10.1016/j.biocon.2019.01.007</div>
+          </div>
+          <div class="pub-action"><a class="pub-link" href="https://doi.org/10.1016/j.biocon.2019.01.007" target="_blank" rel="noopener">原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+        </div>
+      </div>
+      <p class="pub-note reveal">* 完整论文列表请参见兰州大学生态学院师资页面及 Google Scholar / ORCID。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 项目成果 ===================== -->
+<section class="page" id="page-projects">
+  <div class="section projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Projects & Outcomes</span>
+        <h2>项目成果</h2>
+        <p>从科学研究到科普传播、再到智库建言，「科研—科普—智库」三位一体推动保护决策。</p>
+      </div>
+      <div class="proj-grid">
+        <div class="proj reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v4M15 2v4M4 8h16M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 13h8M8 17h5"/></svg></div>
+          <h4>国家自然科学基金项目</h4>
+          <p>主持国家自然科学基金项目 2 项，围绕气候变化与人类活动耦合下的濒危灵长类保护开展系统研究，产出一批具有国际影响力的保护生物学成果。</p>
+        </div>
+        <div class="proj reveal d1">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v5c0 4-3 6.5-7 8-4-1.5-7-4-7-8V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h4>智库建言与政策转化</h4>
+          <p>先后有 10 余份内参被中央和省级政府采纳，推动濒危物种保护决策的科学化与精细化，让保护生物学研究从论文走向政策现场。</p>
+        </div>
+        <div class="proj reveal d2">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></div>
+          <h4>科普著作（39 部）</h4>
+          <p>将前沿保护科学转化为公众可理解、可参与的知识资源，先后获得中国好书奖、全国优秀科普图书奖、梁希科普一等奖，以科普推动保护行动力的转化。</p>
+        </div>
+        <div class="proj reveal d3">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/></svg></div>
+          <h4>科普教育与平台建设</h4>
+          <p>作为兰州大学科普部部长，牵头建设「萃英生态科普教育基地」（获评中国生态学会生态科普教育基地），长期深入校园与基层开展野生动物与自然科学科普宣讲。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 野外风采 ===================== -->
+<section class="page" id="page-field">
+  <div class="section field">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Field Work</span>
+        <h2>野外风采</h2>
+        <p>从青藏高原到神农架，课题组的身影常年奔波于濒危灵长类的栖息地一线。</p>
+      </div>
+    </div>
+    <div class="marquee reveal" aria-label="野外科考图片滚动展示">
+      <div class="marquee-track" id="marqueeTrack">
+        <div class="marquee-group">
+          <div class="field-card">
+            <img src="assets/field1.jpg" alt="野外的灵长类">
+            <div class="cap"><h5>林间灵长类</h5><span>野外栖息地记录</span></div>
+          </div>
+          <div class="field-card">
+            <img src="assets/field2.jpg" alt="高原雪山与冰川">
+            <div class="cap"><h5>高原雪山冰川</h5><span>高山草甸 · 野外科考沿线</span></div>
+          </div>
+          <div class="field-card">
+            <img src="assets/field3.jpg" alt="云雾环绕的山中驻地">
+            <div class="cap"><h5>云雾山中的驻地</h5><span>科考驻点掠影</span></div>
+          </div>
+          <div class="field-card">
+            <img src="assets/field4.jpg" alt="峡谷红层地貌与村落">
+            <div class="cap"><h5>峡谷红层地貌</h5><span>野外科考途中</span></div>
+          </div>
+          <div class="field-card">
+            <img src="assets/field5.jpg" alt="高原湖泊与远山倒影">
+            <div class="cap"><h5>高原湖泊倒影</h5><span>科考沿线风光</span></div>
+          </div>
+          <div class="field-card">
+            <img src="assets/field6.jpg" alt="高山湖泊与小镇">
+            <div class="cap"><h5>高山湖泊小镇</h5><span>高原科考沿线</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container"><p class="field-hint">悬停暂停 · 图片为课题组野外科考与科普活动记录</p></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== 页脚 ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h5>动物翻译官-灵长类保护</h5>
+        <p>兰州大学生态学院 · 保护生物学与生态文明研究<br>以系统思维守护濒危灵长类。</p>
+        <p class="motto">秉德天地 · 齐明致远</p>
+      </div>
+      <div>
+        <h5>快速导航</h5>
+        <ul>
+          <li><a href="#team">团队成员</a></li>
+          <li><a href="#publications">发表论文</a></li>
+          <li><a href="#projects">项目成果</a></li>
+          <li><a href="#field">野外风采</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>联系方式</h5>
+        <ul>
+          <li><a href="mailto:zhaoxm@lzu.edu.cn">zhaoxm@lzu.edu.cn</a></li>
+          <li>兰州大学生态学院 · 甘肃兰州</li>
+          <li><a href="https://ce.lzu.edu.cn" target="_blank" rel="noopener">ce.lzu.edu.cn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>新媒体矩阵</h5>
+        <ul>
+          <li>微信公众号 · 动物翻译官</li>
+          <li>微信视频号 · 动物翻译官</li>
+          <li><a href="https://xhslink.cn/o/5C38DOQUzhg" target="_blank" rel="noopener">小红书 · 赵序茅</a></li>
+          <li><a href="https://v.douyin.com/SVAElI6rMj8/" target="_blank" rel="noopener">抖音 · 动物翻译官</a></li>
+          <li><a href="https://b23.tv/8Elv4vl" target="_blank" rel="noopener">B站 · 动物翻译官</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 兰州大学生态学院 · 动物翻译官-灵长类保护</span>
+      <span>院训「秉德天地，齐明致远」</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  document.documentElement.classList.add('js');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const pages = document.querySelectorAll('.page');
+  const navToggle = document.getElementById('navToggle');
+  const navList = document.getElementById('navLinks');
+
+  // ---- 路由切换 ----
+  function showPage(name){
+    pages.forEach(p => p.classList.toggle('active', p.id === 'page-' + name));
+    navLinks.forEach(a => a.classList.toggle('active', a.dataset.page === name));
+    window.scrollTo({top:0, behavior:'auto'});
+    // 关闭移动端菜单
+    navList.classList.remove('open');
+    navToggle.setAttribute('aria-expanded','false');
+    // 触发新页面内的 reveal
+    requestAnimationFrame(()=>{ observeReveals(); });
+  }
+
+  function route(){
+    const hash = (location.hash || '#home').replace('#','');
+    const valid = ['home','team','publications','projects','field'];
+    showPage(valid.includes(hash) ? hash : 'home');
+  }
+
+  window.addEventListener('hashchange', route);
+  navLinks.forEach(a => a.addEventListener('click', ()=>{
+    navList.classList.remove('open');
+  }));
+
+  // ---- 移动端菜单 ----
+  navToggle.addEventListener('click', ()=>{
+    const open = navList.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(open));
+  });
+
+  // ---- 进入视口动画 ----
+  let observer;
+  function observeReveals(){
+    if(observer) observer.disconnect();
+    observer = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); observer.unobserve(e.target); }
+      });
+    },{threshold:.12});
+    document.querySelectorAll('.page.active .reveal:not(.in)').forEach(el=>observer.observe(el));
+  }
+
+  // ---- 数字统计动画 ----
+  function animateCount(el){
+    const target = parseInt(el.dataset.count, 10);
+    const dur = 1200, start = performance.now();
+    function tick(now){
+      const p = Math.min((now - start)/dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased);
+      if(p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  const statObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.querySelectorAll('[data-count]').forEach(animateCount);
+        statObserver.unobserve(e.target);
+      }
+    });
+  },{threshold:.4});
+  const stats = document.querySelector('.hero-stats');
+  if(stats) statObserver.observe(stats);
+
+  // ---- 滚动画廊：复制一组内容实现无缝循环 ----
+  const track = document.getElementById('marqueeTrack');
+  if(track){
+    const group = track.querySelector('.marquee-group');
+    if(group){
+      const clone = group.cloneNode(true);
+      clone.setAttribute('aria-hidden','true');
+      track.appendChild(clone);
+    }
+  }
+
+  // ---- 初始化 ----
+  route();
+  observeReveals();
+})();
+</script>
+</body>
+</html>
